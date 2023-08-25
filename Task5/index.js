@@ -5,10 +5,9 @@ class Person{
 		this.gender=gender;
 	}
 	getDetails() {
-		console.log(`${this.name} ${this.age} ${this.gender}`)
+		console.log(`Имя: ${this.name} Возраст: ${this.age} Пол: ${this.gender}`)
 	} 
 };
-
 
 class Student extends Person {
 	constructor(name,age,gender,major) {
@@ -24,7 +23,7 @@ class Student extends Person {
 	// 	this.majorLog()
 	// };
 	getDetails() {
-		console.log(`${this.name} ${this.age} ${this.gender} ${this.major}`)
+		console.log(`Имя: ${this.name} Возраст: ${this.age} Пол: ${this.gender} Специальность: ${this.major}`)
 	} 
 };
 
