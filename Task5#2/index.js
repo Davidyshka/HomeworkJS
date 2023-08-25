@@ -25,7 +25,7 @@ class Developer extends Manager {
 		this.machineLanguage = options.machineLanguage
 	}
 		getDetails() {
-		console.log(`Имя: ${this.name} Зарплата: ${this.salary} ${this.machineLanguage}`)
+		console.log(`Имя: ${this.name} Зарплата: ${this.salary} Язык программирования: ${this.machineLanguage}`)
 	}
 }
 
