@@ -1,0 +1,12 @@
+.users-form{
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+}
+
+.users-form input{
+	margin-bottom: 20px ;
+}
+
+
+
