@@ -9,12 +9,10 @@ usersForm.addEventListener('submit',(event) => {
 		surname: surname.value,
 		age: age.value
 	};
-	const isValues=[]
+	let isValues=[]
 	isValues.push(values)
 
-	
-
-	isValues.forEach((elem) => {
+	isValues.forEach((elem,index) => {
 		userTable.innerHTML+=
 		`<tbody>
 		<td class="index"></td>
