@@ -1,4 +1,5 @@
 const usersForm=document.querySelector('.users-form')
+const userTable=document.querySelector('.table-body');
 
 usersForm.addEventListener('submit',(event) => {
 	event.preventDefault()
@@ -11,21 +12,23 @@ usersForm.addEventListener('submit',(event) => {
 	const isValues=[]
 	isValues.push(values)
 
-	const userTable=document.querySelector('.table-body');
+	
 
-	isValues.forEach((elem,index) => {
+	isValues.forEach((elem) => {
 		userTable.innerHTML+=
 		`<tbody>
-		<td>#${index +1}</td>
+		<td class="index"></td>
     <td>${elem.name}</td>
     <td>${elem.surname}</td>
     <td>${elem.age}</td>
 		</tbody>
 		`
-		
+	 const elements = document.querySelectorAll('.index');
+   elements.forEach(function(item, i) {
+       item.innerHTML = i+1;
+   });
 	});
-		console.log(isValues)
-	
-
 });
+
+
 
