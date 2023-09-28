@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Practica</title>
-  </head>
-  <body>
-    <!-- FORM -->
-    <form class="users-form">
-      <input
-        name="name"
-        class="users-form_name"
-        placeholder="Name"
-        type="text"
-      />
-      <input
-        name="surname"
-        class="users-form_surname"
-        placeholder="Surname"
-        type="text"
-      />
-      <input name="age" class="users-form_age" placeholder="Age" type="text" />
-      <input class="users-form_button" type="submit" />
-    </form>
-    <!-- TABLE -->
-    <table style="border: 2px solid black; width: 500px;">
-      <thead>
-        <td>#</td>
-        <td>Name</td>
-        <td>Surname</td>
-        <td>Age</td>
-      </thead>
-      <tbody class="table-body"></tbody>
-    </table>
-  </body>
-  <script type="text/javascript" src="./index.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Practica</title>
+	</head>
+	<body>
+		<!-- FORM -->
+		<form class="users-form">
+			<input
+				name="name"
+				class="users-form_name"
+				placeholder="Name"
+				type="text"
+			/>
+			<div class="error nameError"></div>
+			<input
+				name="surname"
+				class="users-form_surname"
+				placeholder="Surname"
+				type="text"
+			/>
+			<div class="error surnameError"></div>
+			<input
+				name="age"
+				class="users-form_age"
+				placeholder="Age"
+				type="number"
+			/>
+			<div class="error ageError"></div>
+			<input class="users-form_button" type="submit" />
+		</form>
+		<!-- TABLE -->
+		<table style="border: 2px solid black; width: 500px;">
+			<thead>
+				<td>#</td>
+				<td>Name</td>
+				<td>Surname</td>
+				<td>Age</td>
+			</thead>
+			<tbody class="table-body"></tbody>
+		</table>
+		<button id="deleteButton">Delete All</button>
+	</body>
+	<script type="text/javascript" src="./index.js"></script>
 </html>

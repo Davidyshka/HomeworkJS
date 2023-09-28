@@ -1,12 +1,26 @@
-.users-form{
+.users-form {
 	display: flex;
 	flex-direction: column;
 	max-width: 500px;
 }
 
-.users-form input{
-	margin-bottom: 20px ;
+.users-form input {
+	margin-bottom: 10px;
 }
 
+table {
+	margin-bottom: 20px;
+}
 
+table tbody {
+	margin-bottom: 20px;
+}
 
+#deleteButton {
+	width: 500px;
+	height: 50px;
+}
+
+.error {
+	color: red;
+}
