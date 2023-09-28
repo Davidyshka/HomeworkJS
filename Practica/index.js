@@ -7,11 +7,12 @@ const getUser=() => {
 		name: name.value,
 		surname: surname.value,
 		age: age.value
-	}
-	return  isUser
-}
+	};
+	return isUser
+};
 
 const createTable=(userData,userTable) => {
+	 userTable.innerHTML = ``
 	userData.forEach((elem,index) => {
 		userTable.innerHTML +=
 			`<tbody>
