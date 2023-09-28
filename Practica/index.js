@@ -1,32 +1,40 @@
-const usersForm=document.querySelector('.users-form')
-const userTable=document.querySelector('.table-body');
+let usersForm=document.querySelector('.users-form')
+let isTable=document.querySelector('.table-body');
 
-usersForm.addEventListener('submit',(event) => {
-	event.preventDefault()
-	const { name,surname,age }=usersForm;
-	const values={
+const getUser=() => {
+	let { name,surname,age }=usersForm
+	const isUser={
 		name: name.value,
 		surname: surname.value,
 		age: age.value
-	};
-	let isValues=[]
-	isValues.push(values)
+	}
+	return  isUser
+}
 
-	isValues.forEach((elem,index) => {
-		userTable.innerHTML+=
-		`<tbody>
-		<td class="index"></td>
+const createTable=(userData,userTable) => {
+	userData.forEach((elem,index) => {
+		userTable.innerHTML +=
+			`<tbody>
+		<td>${index+1}</td>
     <td>${elem.name}</td>
     <td>${elem.surname}</td>
     <td>${elem.age}</td>
 		</tbody>
 		`
-	 const elements = document.querySelectorAll('.index');
-   elements.forEach(function(item, i) {
-       item.innerHTML = i+1;
-   });
 	});
-});
+};
 
+const init=() => {
+	let isValue=[]
+	usersForm.addEventListener('submit',(event) => {
+		event.preventDefault();
+		
+		const user=getUser();
+		isValue.push(user);
+		createTable(isValue,isTable);
+		console.log(isValue);
+	});
 
+};
 
+init()
